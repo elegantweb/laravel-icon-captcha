@@ -46,7 +46,7 @@ class CaptchaBoard
 
         // TODO: use factory pattern and create Imagine object based on available drivers
         $this->imagine = new Imagine();
-        $this->image = $this->imagine->create($this->calcBoardSize());
+        $this->image = $this->imagine->create($this->calcBoardSize(), $this->bgColor);
     }
 
     protected function calcBoardSize(): BoxInterface
@@ -87,7 +87,7 @@ class CaptchaBoard
         $imgWidth = $this->image->getSize()->getWidth();
         $imgHeight = $this->image->getSize()->getHeight();
 
-        $font = $this->imagine->font(__DIR__ . '/../font/SpaceMono-Regular.ttf', 14, $this->mainColor);
+        $font = $this->imagine->font(__DIR__ . '/../resources/font/SpaceMono-Regular.ttf', 14, $this->mainColor);
 
         $box = $font->box($text);
         $boxWidth = $box->getWidth();

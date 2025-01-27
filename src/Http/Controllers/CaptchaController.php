@@ -27,7 +27,7 @@ class CaptchaController extends Controller
         $builder->setScratchCount(Config::get('captcha.icon.scratch_count'));
         $captcha = $director->build($builder);
 
-        $request->session()->put('captcha.icon', $captcha);
+        $request->session()->put('captcha.icon', $captcha->getPlacement());
 
         $content = $captcha->render();
 
