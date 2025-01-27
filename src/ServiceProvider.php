@@ -18,7 +18,7 @@ class ServiceProvider extends BaseServiceProvider
         $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
 
         $validator = $this->app['validator'];
-        $validator->extend('captcha_icons', function ($attribute, $value, $parameters) {
+        $validator->extend('captcha_icon', function ($attribute, $value, $parameters) {
             return isset($value[0], $value[1])
                     && captcha_icon_check($value[0], $value[1]);
         });
