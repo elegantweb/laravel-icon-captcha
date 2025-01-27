@@ -21,10 +21,10 @@
     },
     "require": {
         "imagine/imagine": "^1.5",
-        "illuminate/routing": "^11.39",
-        "illuminate/support": "^11.39",
-        "illuminate/http": "^11.39",
-        "illuminate/session": "^11.39"
+        "illuminate/routing": "^8.0|^9.0|^10.0|^11.0",
+        "illuminate/support": "^8.0|^9.0|^10.0|^11.0",
+        "illuminate/http": "^8.0|^9.0|^10.0|^11.0",
+        "illuminate/session": "^8.0|^9.0|^10.0|^11.0"
     },
     "extra": {
         "laravel": {
