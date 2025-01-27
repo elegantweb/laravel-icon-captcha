@@ -1,6 +1,6 @@
 <?php
 
-namespace Elegant\Captcha\Clock;
+namespace Elegant\Captcha\Icon;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 

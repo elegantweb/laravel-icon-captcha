@@ -13,7 +13,7 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Elegant\\Captcha\\Icons\\": "src/"
+            "Elegant\\Captcha\\Icon\\": "src/"
         },
         "files": [
             "src/Support/helpers.php"
