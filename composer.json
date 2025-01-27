@@ -29,7 +29,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Elegant\\Captcha\\Icons\\ServiceProvider"
+                "Elegant\\Captcha\\Icon\\ServiceProvider"
             ]
         }
     }
