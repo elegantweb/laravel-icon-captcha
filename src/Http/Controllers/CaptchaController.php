@@ -2,8 +2,8 @@
 
 namespace Elegant\Captcha\Icon\Http\Controllers;
 
-use Elegant\Captcha\Icon\CaptchaBuilder;
-use Elegant\Captcha\Icon\CaptchaDirector;
+use Elegant\Captcha\Icon\Contracts\CaptchaBuilder;
+use Elegant\Captcha\Icon\Contracts\CaptchaDirector;
 use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;

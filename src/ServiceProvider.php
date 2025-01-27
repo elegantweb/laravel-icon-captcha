@@ -2,6 +2,8 @@
 
 namespace Elegant\Captcha\Icon;
 
+use Elegant\Captcha\Icon\Contracts\CaptchaBuilder as CaptchaBuilderContract;
+use Elegant\Captcha\Icon\Contracts\CaptchaDirector as CaptchaDirectorContract;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
 class ServiceProvider extends BaseServiceProvider
@@ -30,5 +32,8 @@ class ServiceProvider extends BaseServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(__DIR__ . '/../config/captcha.icon.php', 'captcha.icon');
+
+        $this->app->bind(CaptchaBuilderContract::class, CaptchaBuilder::class);
+        $this->app->singleton(CaptchaDirectorContract::class, CaptchaDirector::class);
     }
 }
