@@ -1,0 +1,36 @@
+{
+    "name": "elegantweb/laravel-icon-captcha",
+    "description": "Icons based captcha library for the Laravel framework.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sina Sharifzade",
+            "email": "sharifzadesina@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Elegant\\Captcha\\Icons\\": "src/"
+        },
+        "files": [
+            "src/Support/helpers.php"
+        ]
+    },
+    "require": {
+        "imagine/imagine": "^1.5",
+        "illuminate/routing": "^11.39",
+        "illuminate/support": "^11.39",
+        "illuminate/http": "^11.39",
+        "illuminate/session": "^11.39"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Elegant\\Captcha\\Icons\\ServiceProvider"
+            ]
+        }
+    }
+}
