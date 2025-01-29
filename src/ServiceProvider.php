@@ -19,8 +19,7 @@ class ServiceProvider extends BaseServiceProvider
 
         $validator = $this->app['validator'];
         $validator->extend('captcha_icon', function ($attribute, $value, $parameters) {
-            return isset($value[0], $value[1])
-                    && captcha_icon_check($value[0], $value[1]);
+            return is_array($value) && isset($value[0], $value[1]) && is_int($value[0]) && is_int($value[1]) && captcha_icon_check($value[0], $value[1]);
         });
     }
 
