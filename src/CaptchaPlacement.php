@@ -41,6 +41,8 @@ class CaptchaPlacement
                 return $position;
             }
         }
+
+        return null;
     }
 
     protected static function randomPlace(array $positions, int $totalCount): int

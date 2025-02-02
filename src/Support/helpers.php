@@ -8,8 +8,10 @@ use Illuminate\Support\Facades\URL;
 if (!function_exists('captcha_icon_check')) {
     function captcha_icon_check(int $x, int $y): bool
     {
-        /** @var CaptchaPlacement */
+        /** @var CaptchaPlacement|null */
         $captchaPlacement = Session::get('captcha.icon');
+        if (null === $captchaPlacement) return false;
+
         $captchaValidator = new CaptchaValidator($captchaPlacement);
 
         return $captchaValidator->validateCoordinates($x, $y);
